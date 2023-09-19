@@ -20,9 +20,15 @@ void print_triangle(int leftCol, int size)
   for (int row = 0; row <= size; row++) {
     int minCol = leftCol + size - row, maxCol = leftCol + size + row;
     int col;
-    for (col = 0; col < minCol; col++) putchar(' ');
+    int counter=0;
+    for (col = 0; col < minCol; col++) putchar(' ');//printf("%d",++counter);
     for (       ; col <= maxCol; col++) putchar('*');
     putchar('\n');
   }
+}
+
+void print_Arrow_8x12(char c){
+  print_arrow_triangle();
+  print_arrow_square( c);
 }
 
